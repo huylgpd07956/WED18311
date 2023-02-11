@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    a {
+        text-decoration: none;
+    }
+
+    h1 {
+        color: blue;
+        font-family: inherit;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container {
+        padding: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        width: 430px;
+        height: 650px;
+        margin: 0 auto;
+    }
+
+    .form-control {
+        padding-left: 10px;
+        display: inline-block;
+        width: 198px;
+        height: 35px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        outline: none;
+
+    }
+
+    input {
+        outline: none;
+        border: 1px solid rgb(169, 155, 155);
+    }
+
+    .form-control4 {
+        padding-left: 10px;
+        width: 415px;
+        height: 35px;
+        border-radius: 5px;
+    }
+
+    .form-control5 {
+        padding-left: 10px;
+        width: 415px;
+        height: 35px;
+        border-radius: 5px;
+    }
+
+    .name {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .day {
+        margin-right: 20px;
+        width: 125px;
+        height: 35px;
+        border-radius: 5px;
+    }
+
+    .month {
+        margin-right: 20px;
+        width: 125px;
+        height: 35px;
+        border-radius: 5px;
+    }
+
+    .year {
+        margin-left: 1px;
+        width: 125px;
+        height: 35px;
+        border-radius: 5px;
+    }
+
+
+    .sex .item {
+        display: inline-block;
+        padding: 10px 25px;
+        border: 1px solid #333;
+        border-radius: 4px;
+        margin-right: 36px;
+    }
+
+     .btn {
+        display: block;
+        width: 50%;
+        height: 25px;
+        margin: 0 auto;
+        border: 0;
+        background-color: rgb(69, 186, 69);
+        color: #fff;
+        font-weight: bold;
+        border-radius: 5px;
+     }
+
+</style>
+
+<body>
+    <h1>FaceBook</h1><br>
+    <div class="container">
+        <form>
+            <h2 class="name">Tạo tài khoản mới</h2>
+            <p class="name">nhanh chóng và dễ dàng</p><br>
+            <input type="text" class="form-control" placeholder="Họ">
+            <input type="text" class="form-control" placeholder="Tên"><br><br>
+            <input type="email" class="form-control4" placeholder="Email"><br><br>
+            <input type="password" class="form-control5" placeholder="Mật khẩu mới"><br>
+
+            <p>Sinh nhật</p>
+            <select class="day">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+            <select class="month">
+                <option value="1">Tháng 1</option>
+                <option value="2">Tháng 2</option>
+                <option value="3">Tháng 3</option>
+                <option value="4">Tháng 4</option>
+                <option value="5">Tháng 5</option>
+                <option value="6">Tháng 6</option>
+                <option value="7">Tháng 7</option>
+                <option value="8">Tháng 8</option>
+                <option value="9">Tháng 9</option>
+                <option value="10">Tháng 10</option>
+                <option value="11">Tháng 11</option>
+                <option value="12">Tháng 12</option>
+            </select>
+            <select class="year">
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+            </select>
+
+            <p>Giới tính</p>
+            <div class="sex">
+               <div class="item">
+                <label for="">Nam</label>
+                <input name="gender" type="radio" /> 
+               </div>
+               <div class="item">
+                <label for="">Nữ</label>
+                <input name="gender" type="radio" /> 
+               </div>
+               <div class="item">
+                <input name="gender" type="radio" /> <label for="">Khác</label><br>
+               </div>
+
+            </div>
+            <p>Những người dùng dịch vụ của chúng tôi có thể đã tải thông tin liên hệ của bạn lên Facebook.<a
+                    href="">Tìm hiểu
+                    thêm</a>.
+            </p>
+            <p>bằng cách nhấp vào Đăng ký.bạn đồng ý với <a href="">Điều khoản,Chính sách quyền riêng tư </a> và <a
+                    href="">chính sách cookie</a> của chúng tôi.Bạn có thể nhận được thông báo của chúng tôi qua SMS và
+                hủy nhận
+                bất kỳ lúc nào.
+            </p>
+            <button class="btn">Đăng ký</button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

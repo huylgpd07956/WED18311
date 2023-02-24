@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="text/css" />
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body,
+    html {
+      height: 100%;
+      min-height: 100%;
+      width: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .header {
+      position: fixed;
+      display: flex;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 250px;
+      background-image: url(https://thpttranhungdaohoian.edu.vn/uploads/2banner_1.jpg);
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: cover;
+      z-index: 1;
+    }
+    .nav {
+      position: fixed;
+      display: flex;
+      top: 250px;
+      left: 0;
+      right: 0;
+      height: 50px;
+      background: blue;
+      margin: 0 5%;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+    .text-nav li {
+      display: inline-block;
+    }
+    .nav .text-nav {
+      list-style-type: none;
+    }
+    .nav .text-nav a {
+      text-decoration: none;
+      color: #fff;
+      display: flex;
+      padding: 16px;
+    }
+    .nav .text-nav a:hover {
+      text-decoration: none;
+      color: rgb(225, 14, 14);
+      display: flex;
+      padding: 16px;
+      background-color: #333;
+    }
+    .nav .text-nav .sub-nav {
+      position: absolute;
+      display: none;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .nav .text-nav .sub-nav a {
+      display: flex;
+      font-weight: 300;
+      border-bottom: 1px solid #7e7e7e;
+      padding-inline: unset;
+      color: #000;
+      min-width: 350px;
+      padding: 10px 20px;
+    }
+    .nav .text-nav .sub-nav a:hover {
+      color: #fff;
+      background-color: #000;
+      font-weight: bold;
+    }
+    .nav .text-nav li:hover .sub-nav {
+      display: block;
+      max-width: 350px;
+    }
+    .article {
+      position: absolute;
+      width: 70%;
+      top: 300px;
+      margin-left: 5%;
+      margin-top: 10px;
+    }
+    .article .article-one,
+    .article .article-two,
+    .article .article-three {
+      border: 1px solid #7e7e7e;
+      margin: 20px 0;
+      padding-bottom: 20px;
+    }
+    .text-article-three,
+    .text-article-two,
+    .text-article-one {
+      display: flex;
+    }
+    .sub-article-three span,
+    .sub-article-two span,
+    .sub-article-one span {
+      display: inline-block;
+      position: relative;
+      top: 6px;
+      font-weight: bold;
+    }
+    .sub-article-three a,
+    .sub-article-two a,
+    .sub-article-one a {
+      text-decoration: none;
+      color: blue;
+    }
+    .sub-article-three a:hover,
+    .sub-article-two a:hover,
+    .sub-article-one a:hover {
+      color: orange;
+    }
+    .text-article {
+      display: block;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    .text-article a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 20px;
+    }
+    .text-article a:hover {
+      color: orange;
+    }
+    .text-article p {
+      padding-top: 20px;
+      opacity: 0.8;
+      line-height: 20px;
+    }
+    .article h1 {
+      border: 1px solid #7e7e7e;
+      border-left: 5px solid red;
+      padding: 10px 20px;
+      color: red;
+    }
+    .article img {
+      width: 200px;
+      height: 150px;
+      border-radius: 10px;
+      margin: 20px 0 0 10px;
+    }
+    .aside {
+      position: absolute;
+      width: 20%;
+      right: 0;
+      top: 300px;
+      margin-right: 4%;
+    }
+    .aside .input input {
+      height: 30px;
+      width: 75%;
+    }
+    .aside .input span {
+      background-color: orangered;
+      padding: 3px;
+      position: absolute;
+      color: #fff;
+      font-weight: bold;
+    }
+    .aside .notification {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: 50px 27px 0 0;
+      padding: 5px;
+      background-color: orangered;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      z-index: 0;
+    }
+    .text-aside {
+      border: 2px solid orangered;
+      overflow: scroll;
+      height: 300px;
+      margin-right: 25px;
+      margin-top: 20px;
+    }
+    .text-aside .content {
+      padding: 10px 5px;
+      border-bottom: 1px dotted;
+      margin-left: 10px;
+      font-size: 15px;
+    }
+    .text-aside .content a {
+      text-decoration: none;
+      color: orangered;
+    }
+    .text-aside .content p:hover {
+      text-decoration: dashed;
+    }
+    .footer {
+      position: relative;
+      height: 100px;
+      top: 1500px;
+      background-color: #02a8f3;
+      text-align: center;
+      padding: 20px;
+      line-height: 20px;
+      color: #fff;
+      font-size: 13px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="header"></div>
+      <div class="nav">
+        <ul class="text-nav">
+          <li>
+            <a href="">Giới thiệu</a>
+            <ul class="sub-nav">
+              <li><a href="">Nét đẹp trường THPT Trần Hưng Đạo</a></li>
+              <li><a href="">Ban giám hiệu</a></li>
+              <li><a href="">cơ cấu tổ chức</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">Tin tức hoạt động</a>
+            <ul class="sub-nav">
+              <li><a href="">Hoạt động đảng - đoàn thể</a></li>
+              <li><a href="">Hoạt động chuyên môn</a></li>
+              <li><a href="">Hoạt động đoàn THCSHCM</a></li>
+              <li><a href="">Hoạt động ngoài giờ lên lớp</a></li>
+              <li><a href="">Hoạt động khác</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">văn bản</a>
+            <ul class="sub-nav">
+              <li><a href="">Báo cáo</a></li>
+              <li><a href="">Chỉ thị</a></li>
+              <li><a href="">Công văn</a></li>
+              <li><a href="">Kế hoạch</a></li>
+              <li><a href="">Luật</a></li>
+              <li><a href="">Nghị định</a></li>
+              <li><a href="">Nghị quyết</a></li>
+              <li><a href="">Quyết định</a></li>
+              <li><a href="">Thông báo</a></li>
+              <li><a href="">Thông tư</a></li>
+              <li><a href="">Tờ trình</a></li>
+              <li><a href="">Văn bản khác</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">Tài nguyên</a>
+            <ul class="sub-nav">
+              <li><a href="">Bài giảng điện tử</a></li>
+              <li><a href="">Ngân hàng đề thi</a></li>
+              <li><a href="">Sách giáo khoa</a></li>
+              <li><a href="">Nghiên cứu khoa học</a></li>
+              <li><a href="">Phần mềm-Tiện ích</a></li>
+              <li><a href="">Phần mềm Giáo dục-Học tập</a></li>
+              <li><a href="">Sáng kiến kinh nghiệm</a></li>
+              <li><a href="">Tài liệu-Giáo trình</a></li>
+              <li><a href="">Thư viện ảnh</a></li>
+              <li><a href="">Thư viện videos</a></li>
+            </ul>
+          </li>
+          <li><a href="">Dạy và học</a></li>
+          <li><a href="">Hỏi đáp</a></li>
+        </ul>
+      </div>
+      <div class="article">
+        <div class="article-one">
+          <h1>DẠY VÀ HỌC</h1>
+          <div class="text-article-one">
+            <div class="image">
+              <img
+                src="https://tkh.edu.vn/wp-content/uploads/2023/01/1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="text-article">
+              <span
+                ><a href=""
+                  >CHƯƠNG TRÌNH NGOẠI KHÓA VỚI CHUYÊN ĐỀ “GIÁO DỤC SỨC KHỎE GIỚI
+                  TÍNH TRONG HỌC ĐƯỜNG”</a
+                ></span
+              >
+              <p>
+                Ngày 03/10/2022 tổ Tư vấn tâm lý học đường đã tổ chức chương
+                trình ngoại khóa với chuyên đề “Giáo dục sức khỏe giới tính
+                trong học đường” vào tiết chào cờ tại trường THPT Trần Hưng Đạo
+                Thông qua các hình thức như văn nghệ, tiểu phẩm và câu hỏi giao
+                lưu kiến thức đã giúp các em học sinh có thêm những kiến thức,
+                kỹ năng về sức... ...
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--article-two-->
+        <div class="article-two">
+          <div class="text-article-two">
+            <div class="image">
+              <img
+                src="https://tkh.edu.vn/wp-content/uploads/2020/06/Thanh_Khe.jpg"
+                alt=""
+              />
+            </div>
+            <div class="text-article">
+              <span
+                ><a href=""
+                  >Danh mục sách giáo khoa lớp 10 sử dụng trong cơ sở giáo dục
+                  trung học trên địa bàn thành phố Hội An  từ năm học
+                  2022-2023</a
+                ></span
+              >
+              <p>...</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-one">
+          <div class="text-article-one">
+            <div class="image">
+              <img
+                src="https://tkh.edu.vn/wp-content/uploads/2020/06/Thanh_Khe.jpg"
+                alt=""
+              />
+            </div>
+            <div class="text-article">
+              <span
+                ><a href=""
+                  >Hướng dẫn sử dụng tài liệu dạy học bậc trung học năm
+                  2022-2023</a
+                ></span
+              >
+              <p>...</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-one">
+          <div class="text-article-one">
+            <div class="image">
+              <img
+                src="http://tkh.edu.vn/wp-content/uploads/Thumbcache/no-thumb-p9qwqoblpuwam2vkg1sbzlk10p0mae98m1kef8pca6.png"
+                alt=""
+              />
+            </div>
+            <div class="text-article">
+              <span
+                ><a href=""
+                  >Đề cương ôn tập học kỳ II môn Ngữ Văn khối 10 năm
+                  2018-2019</a
+                ></span
+              >
+              <p>...</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-one">
+          <div class="text-article-one">
+            <div class="image">
+              <img
+                src="http://tkh.edu.vn/wp-content/uploads/Thumbcache/no-thumb-p9qwqoblpuwam2vkg1sbzlk10p0mae98m1kef8pca6.png"
+                alt=""
+              />
+            </div>
+            <div class="text-article">
+              <span
+                ><a href=""
+                  >Đề cương ôn tạp học kỳ II môn Công nghệ khối 10 năm
+                  2018-2019</a
+                ></span
+              >
+              <p>...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="aside">
+        <div class="input">
+          <input type="text" placeholder="Tìm kiếm" /><span
+            class="material-symbols-outlined"
+            >search</span
+          >
+        </div>
+        <div class="text-aside">
+          <div class="notification">
+            <p>Thông báo</p>
+          </div>
+          <div class="content">
+            <a href="">
+              Kế hoạch công tác tuần 23(Từ ngày 12/02/2023 đến ngày
+              18/02/2023)<span>(12/02/2023)</span>
+            </a>
+          </div>
+          <div class="content">
+            <a href="">
+              Kế hoạch công tác tuần 23(Từ ngày 13/02/2023 đến ngày
+              18/02/2023)<span>(12/02/2023)</span>
+            </a>
+          </div>
+          <div class="content">
+            <a href="">
+              Gửi báo giá dự toán hạng mục Hút hầm cầu, nhà vệ sinh học
+              sinh<span>(09/02/2023)</span>
+            </a>
+          </div>
+          <div class="content">
+            <a href="">
+              Gửi báo giá dự toán hạng mục Sửa chữa máy chiếu<span
+                >(12/02/2023)</span
+              >
+            </a>
+          </div>
+          <div class="content">
+            <a href="">
+              Kế hoạch công tác tuần 22(Từ ngày 06/02/2023 đến ngày
+              11/02/2023)<span>(05/02/2023)</span>
+            </a>
+          </div>
+          <div class="content">
+            <a href=""
+              >Kế hoạch công tác tháng 2 năm 2023<span>(03/02/2023)</span></a
+            >
+          </div>
+          <div class="content">
+            <a href="">
+              Kế hoạch công tác tuần 21(Từ ngày 30/01/2023 đến ngày
+              04/02/2023)<span>(30/01/2023)</span>
+            </a>
+          </div>
+          <div class="content">
+            <a href="">
+              Kế hoạch công tác tuần 20(Từ ngày 16/01/2023 đến ngày
+              21/01/2023)<span>(15/01/2023)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="top">
+          <p>@2020 thuộc về trường THPT Trần Hưng Đạo - Hội An</p>
+        </div>
+        <div class="right">
+          <p>Địa chỉ: 170 Cừa Đại - Hội An - Quang Nam</p>
+        </div>
+        <div class="left">
+          <p>Website: http://thpttranhungdaohoian.edu.vn</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
